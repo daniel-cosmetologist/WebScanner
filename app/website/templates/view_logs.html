@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}View Logs{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Log Files</h2>
+    <div class="logs">
+        {% for log in logs %}
+        <div class="log">{{ log }}</div>
+        {% endfor %}
+    </div>
+    <button id="downloadLogs" class="btn btn-primary mt-3">Download Logs</button>
+</div>
+
+<script src="{{ url_for('static', filename='js/downloadLogs.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Resource Detail{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>{{ resource.url }}</h2>
+    <p><strong>Domain:</strong> {{ resource.domain }}</p>
+    <p><strong>Status:</strong> {{ resource.status }}</p>
+    <!-- Отображение других деталей ресурса -->
+    <h3>News</h3>
+    <ul>
+        {% for item in news %}
+        <li>{{ item.title }}: {{ item.content }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

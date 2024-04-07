@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Resource List{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Web Resources</h2>
+
+    <div class="row">
+        <div class="col">
+            <input type="text" id="domainSearchInput" class="form-control" placeholder="Search by domain name">
+        </div>
+        <div class="col">
+            <select id="domainZoneFilter" class="form-select">
+                <option value="">Filter by domain zone</option>
+                <!-- опции фильтрации доменной зоны -->
+            </select>
+        </div>
+        <div class="col">
+            <select id="statusFilter" class="form-select">
+                <option value="">Filter by status</option>
+                <option value="available">Available</option>
+                <option value="unavailable">Unavailable</option>
+            </select>
+        </div>
+    </div>
+
+    <table class="table table-striped mt-3">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">URL</th>
+                <th scope="col">Domain</th>
+                <th scope="col">Status</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody id="resourceTableBody">
+            <!-- строки таблицы -->
+        </tbody>
+    </table>
+
+    <nav aria-label="Page navigation">
+        <ul class="pagination" id="pagination">
+            <!-- элементы пагинации -->
+        </ul>
+    </nav>
+</div>
+
+<script src="{{ url_for('static', filename='js/resourceList.js') }}"></script>
+{% endblock %}

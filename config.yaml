@@ -1,0 +1,2 @@
+secret_key: 'super_secret_key_P@$$w0rd'
+database_uri: 'sqlite:///database.db'

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Add Web Resources{% endblock %}
+
+{% block content %}
+
+<div id="messageBox" class="alert" style="display: none;"></div>
+
+<div class="container mt-5">
+    <h2>Add New Web Resource</h2>
+    <form action="/api/add_resource" method="post" id="addResourceForm">
+        <div class="mb-3">
+            <label for="urlInput" class="form-label">Web Resource URL</label>
+            <input type="url" class="form-control" id="urlInput" name="url" placeholder="Enter URL" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Resource</button>
+    </form>
+
+    <hr>
+
+    <h2>Add Multiple Web Resources</h2>
+    <form action="/api/bulk_add_resources" method="post" enctype="multipart/form-data" id="bulkAddResourcesForm">
+        <div class="mb-3">
+            <label for="fileInput" class="form-label">Upload File (CSV format)</label>
+            <input class="form-control" type="file" id="fileInput" name="file" accept=".csv" required>
+            <div id="fileHelp" class="form-text">Upload a CSV file with one URL per line.</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Upload File</button>
+    </form>
+    
+</div>
+
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+{% endblock %}

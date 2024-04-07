@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}News Feed{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>News Feed</h2>
+    <div id="newsFeed"></div>
+    <button id="downloadLogs" class="btn btn-primary mt-3">Download Logs</button>
+</div>
+
+<script src="{{ url_for('static', filename='js/newsFeed.js') }}"></script>
+{% endblock %}
