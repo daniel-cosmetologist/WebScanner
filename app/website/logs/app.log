@@ -466,3 +466,5 @@
 2024-04-07 21:58:05,919 INFO: Created database. [in /home/djden/Development/RubyTech/TEST_1/task_3/app/website/__init__.py:58]
 2024-04-07 21:58:50,498 INFO: Logging enabled. [in /home/djden/Development/RubyTech/TEST_1/task_3/app/website/__init__.py:76]
 2024-04-07 21:58:50,556 INFO: Created database. [in /home/djden/Development/RubyTech/TEST_1/task_3/app/website/__init__.py:60]
+2024-04-09 21:42:20,630 INFO: Logging enabled. [in /home/djden/Development/RubyTech/TEST_1/task_3/app/website/__init__.py:76]
+2024-04-09 21:42:20,742 INFO: Created database. [in /home/djden/Development/RubyTech/TEST_1/task_3/app/website/__init__.py:60]
